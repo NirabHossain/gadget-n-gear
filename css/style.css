@@ -190,9 +190,11 @@ header img{
 /* Responsive started from here  */
 
 @media (max-width: 888px){
-    .first{
-        display: block;
-        text-align: center;
+    .logos{
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .blogs, .collections{
+        grid-template-columns: repeat(2, 1fr);
     }
     .first-head{
         margin: auto;
@@ -201,15 +203,14 @@ header img{
     .last-head{
         display: none;
     }
-    .logos{
-        grid-template-columns: repeat(7, 1fr);
-    }
-    .blogs, .collections{
-        grid-template-columns: repeat(2, 1fr);
-    }
- 
 }
 @media (max-width: 668px){
+    .first{
+        display: block;
+        text-align: center;
+    }
+    
+
     .halved{
         clear: both;
         width: 100%;
