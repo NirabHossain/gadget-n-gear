@@ -16,7 +16,14 @@ header{
     color: whitesmoke;
     justify-content: flex-end;
 }
-
+.first-head:hover, .last-head>*:hover{
+    border: 2px solid sandybrown;
+    background-color: white;
+    color: black;
+}
+.title:hover, .halved:hover{
+    border:2px dotted sandybrown
+} 
 header h5{
     /* border: 3px solid red; */
     padding: 10px;
@@ -77,6 +84,7 @@ header{
 }
 
 
+
 .popular-collections{
     background-color: white;
     padding: 30px 20px;
@@ -87,7 +95,7 @@ header{
     width: 50px;
 }
 
-.blogs,.collections, .logos{
+.collections, .logos{
     display: grid;
     grid-gap: 10px;
     margin: 20px 0;
@@ -95,26 +103,20 @@ header{
 
 .collections{
     grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+
 }
 .logo-container{
-    width: 60%;
+    clear: both;
+    /* width: 60%; */
     margin: auto;
 }
 .logos{
     grid-template-columns: repeat(7,1fr);
     justify-items: center;
+    align-items: center;
 }
 
-
-
-.blogs{
-    grid-template-columns: repeat(2,1fr);
-}
-
-.blog{
-    display: flex;
-    align-items:center;
-}
 
 .popular-collections{
     margin-top: 50px;
@@ -128,6 +130,19 @@ header img{
     height: 50px;
     margin-right: 10px;
 }
+
+.join-us{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, salmon, sandybrown);
+    font-family: "Sansita Swashed", cursive;
+}
+
+
 .thumb img{
     width: 200px;
     margin-right: 20px;
@@ -143,16 +158,20 @@ header img{
 .func{
     display: flex;
 }
+
+/* Rating definition */
 .ratings{
     font-size:x-small;
     margin-right: 5px;
     margin-top: 2px;
 }
+
 .more-info{
     font-size: x-small;
     font-weight: 200;
 }
 
+/* Color definitions */
 .sat{
     color: goldenrod;
 }
@@ -164,7 +183,7 @@ header img{
 
 @media (max-width: 888px){
     .logos{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(7, 1fr);
     }
     .blogs, .collections{
         grid-template-columns: repeat(2, 1fr);
@@ -172,11 +191,30 @@ header img{
  
 }
 @media (max-width: 668px){
+    .first{
+        display: block;
+        text-align: center;
+    }
+    .first-head{
+        margin: auto;
+        text-align: center;
+    }
+    .last-head{
+        display: none;
+    }
+    .halved{
+        clear: both;
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
     .collections{
         grid-template-columns: repeat(1, 1fr);  
     }
     .logos{
         grid-template-columns: repeat(4, 1fr);  
+        justify-items: center;
+        align-items: center;
     }
     .blogs{
         display: block;
