@@ -48,42 +48,75 @@ main{
 .section-title{
     /* color: blue; */
     text-align: center;
+    padding: 20px;
 }
-.logo-container{
-    margin-top: 10px;
+
+header{
+    display: flex;
+    justify-content: space-between;
 }
-.logos, .LatestCourse{
+.first-head{
+    margin: 0 20px;
+    padding: 15px;
+}
+.last-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+.butt{
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px auto;
+    border: 2px solid salmon;
+    border-radius: 10px;
+    color: white;
+    background-color: lightsalmon;
+
+}
+
+
+.popular-collections{
     background-color: white;
     padding: 30px 20px;
 }
-.logos{
-    display: flex;
-}
+
 .logos img{
     height: 20px;
-
+    width: 50px;
 }
 
-.top-players,.blogs,.courses{
+.blogs,.collections, .logos{
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 10px;
     margin: 20px 0;
 }
 
-.logos, .courses{
+.collections{
     grid-template-columns: repeat(3,1fr);
 }
+.logo-container{
+    width: 60%;
+    margin: auto;
+}
+.logos{
+    grid-template-columns: repeat(7,1fr);
+    justify-items: center;
+}
+
+
 
 .blogs{
     grid-template-columns: repeat(2,1fr);
 }
 
-.player,.blog{
+.blog{
     display: flex;
     align-items:center;
 }
 
-.LatestCourse{
+.popular-collections{
     margin-top: 50px;
 }
 
@@ -103,8 +136,8 @@ header img{
 .pic img{
     width: 200px;
 }
-.course p{
-    color: red;
+.gear p{
+    color: salmon;
 }
 
 .func{
@@ -115,12 +148,9 @@ header img{
     margin-right: 5px;
     margin-top: 2px;
 }
-.time{
-    margin-left: 15px;
-    border-radius: 20px;
-    padding:0 5px;
-    background-color: #FFE4E8;
-    color: #FF4A60;
+.more-info{
+    font-size: x-small;
+    font-weight: 200;
 }
 
 .sat{
@@ -130,27 +160,40 @@ header img{
     color: gray;
 }
 
+/* Responsive started from here  */
 
 @media (max-width: 888px){
-    .top-players{
+    .logos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .blogs, .collections{
         grid-template-columns: repeat(2, 1fr);
     }
-    .blogs, .courses{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .course{
-        display: flex;
-    }
+ 
 }
 @media (max-width: 668px){
-    .top-players{
+    .collections{
         grid-template-columns: repeat(1, 1fr);  
     }
-    .blog{
+    .logos{
+        grid-template-columns: repeat(4, 1fr);  
+    }
+    .blogs{
         display: block;
     }
-    .course{
+    .gear{
         display: block;
+        
     }
 }
 
+footer{
+    background: #120E43;
+    color: white;
+    padding: 50px 10px;
+    width: 100%;
+    margin-top: 100px;
+}
+.text-center{
+    text-align: center;
+}
