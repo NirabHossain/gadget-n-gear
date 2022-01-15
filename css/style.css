@@ -16,13 +16,15 @@ header{
     color: whitesmoke;
     justify-content: flex-end;
 }
+/* Hovering effects */
+
 .first-head:hover, .last-head>*:hover{
     border: 2px solid sandybrown;
     background-color: white;
     color: black;
 }
-.title:hover, .halved:hover{
-    border:2px dotted sandybrown
+.title:hover, .halved:hover, .gear:hover{
+    border:3px dotted sandybrown
 } 
 header h5{
     /* border: 3px solid red; */
@@ -130,7 +132,7 @@ header img{
     height: 50px;
     margin-right: 10px;
 }
-
+/* Join us Extra section */
 .join-us{
     margin: 0;
     padding: 0;
@@ -139,9 +141,12 @@ header img{
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, salmon, sandybrown);
-    font-family: "Sansita Swashed", cursive;
+    font-family: "URW Chancery L", cursive
 }
 
+.centering{
+    text-align: center;
+}
 
 .thumb img{
     width: 200px;
