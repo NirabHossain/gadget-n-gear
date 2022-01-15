@@ -74,6 +74,9 @@ header{
     align-items: center;
     padding: 0 20px;
 }
+.last-head i{
+    margin: 15px;
+}
 .butt{
     text-decoration: none;
     padding: 10px;
@@ -187,15 +190,6 @@ header img{
 /* Responsive started from here  */
 
 @media (max-width: 888px){
-    .logos{
-        grid-template-columns: repeat(7, 1fr);
-    }
-    .blogs, .collections{
-        grid-template-columns: repeat(2, 1fr);
-    }
- 
-}
-@media (max-width: 668px){
     .first{
         display: block;
         text-align: center;
@@ -207,6 +201,15 @@ header img{
     .last-head{
         display: none;
     }
+    .logos{
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .blogs, .collections{
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+}
+@media (max-width: 668px){
     .halved{
         clear: both;
         width: 100%;
